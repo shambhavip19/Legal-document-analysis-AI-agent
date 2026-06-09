@@ -1,4 +1,4 @@
-# LexAgent — AI Legal Document Negotiator
+# LexAgent - AI Legal Document Negotiator
 
 **LexAgent** is an agentic, full-stack AI web application designed to accelerate contract review and automate negotiation cycles. By integrating a multi-agent backend orchestrator with a highly responsive, modern frontend, LexAgent enables legal professionals, vendors, and developers to analyze contract risk profiles, retrieve relevant legal precedents, and engage in an interactive counter-proposal revision process.
 
@@ -126,19 +126,3 @@ Navigate to the Export screen for a summary overview of edits. Click **Export Fi
 
 ---
 
-## API Documentation
-
-- **`GET /api/health`**
-  - Verify server connection and OpenAI API key status.
-- **`POST /api/upload`**
-  - Accepts multipart form data (1 or 2 files).
-  - Returns parsed sections, original/counterparty text, and diff calculations.
-- **`POST /api/analyze`**
-  - Input: List of parsed clauses.
-  - Output: Augmented clauses populated with risk ratings, RAG context, and justifications.
-- **`POST /api/negotiate`**
-  - Input: `{ clause_id, clause_text, iteration, user_feedback, original_text }`.
-  - Output: `{ proposed_text, diff, rationale, iteration, status }`.
-- **`POST /api/export`**
-  - Input: `{ clauses: [{ title, text }] }`.
-  - Output: A compiled binary `.docx` file for browser download.
