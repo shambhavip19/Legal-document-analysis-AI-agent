@@ -45,7 +45,7 @@ def generate_counter_proposal(
         
     try:
         # Using Llama 3.1 70b on Groq
-        llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.3, groq_api_key=api_key)
+        llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0.3, groq_api_key=api_key)
         
         prompt = ChatPromptTemplate.from_template(CLAUSE_EDITOR_SYSTEM_PROMPT)
         chain = prompt | llm
