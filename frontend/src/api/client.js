@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = 'https://legal-document-analysis-ai-agent-production.up.railway.app/';
 
 const client = axios.create({
   baseURL: API_BASE_URL,
